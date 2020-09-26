@@ -73,6 +73,12 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
             }
         }
 
+        ArrayList<Integer> prim = new ArrayList<>();
+        for (int i = 2; i <= border; i++) {
+            if (prims[i] == true) {
+                prim.add(i);
+            }
+        }
         
     }
 }
