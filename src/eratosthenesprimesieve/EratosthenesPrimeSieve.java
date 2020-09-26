@@ -22,21 +22,25 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
     }
 
     public static void main(String[] args) {
-        
+         Scanner s = new Scanner(System.in, "Windows-1252");
+        System.out.println("Obergrenze: ");
+        int p = Integer.parseInt(s.nextLine());
+        EratosthenesPrimeSieve prim = new EratosthenesPrimeSieve(p);
+        prim.printPrimes();
     }
 
     //1. Beispiel
     @Override
     public boolean isPrime(int p) {
-        boolean isprim = false;
+         boolean isprim = false;
         boolean[] prime = new boolean[p + 1];
         for (int i = 0; i < p; i++) {
             prime[i] = true;
         }
 
         for (int x = 2; x * x <= p; x++) {
-            if (prime[p] == true) {
-                for (int i = x * 2; i <= x; i += x) {
+            if (prime[x] == true) {
+                for (int i = x * 2; i <= p; i += x) {
                     prime[i] = false;
                 }
             }
