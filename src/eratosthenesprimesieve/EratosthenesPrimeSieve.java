@@ -95,6 +95,16 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
             }
         }
 
+        for (int i = 0; i < splitter.size() - 1; i++) {
+            
+            for (int j = i + 1; j < splitter.size(); j++) {
+                if (splitter.get(i) != null && splitter.get(j) != null && Objects.equals(splitter.get(i)[0], splitter.get(j)[0])) {
+                    if (Objects.equals(splitter.get(i)[1], splitter.get(j)[2])) {
+                        splitter.set(j, null);
+                    }
+                }
+            }
+        }
         
     }
 }
