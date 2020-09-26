@@ -5,6 +5,8 @@
  */
 package eratosthenesprimesieve;
 
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -59,5 +61,18 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
                 System.out.println("Prim: " + i);
             }
         }
+    }
+    
+    //2. Beispiel
+    public void sumPrimes(int n) {
+        
+        ArrayList<Integer> even = new ArrayList<>();
+        for (int i = 3; i <= n; i++) {
+            if (i % 2 == 0) {
+                even.add(i);
+            }
+        }
+
+        
     }
 }
