@@ -29,6 +29,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         int p = Integer.parseInt(s.nextLine());
         EratosthenesPrimeSieve prim = new EratosthenesPrimeSieve(p);
         prim.printPrimes();
+        prim.sumPrimes(p);
     }
 
     //1. Beispiel
@@ -106,5 +107,10 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
             }
         }
         
+        for (Integer[] string : splitter) {
+            if (string != null) {
+                System.out.println(string[0] + " sum = " + string[1] + " + " + string[2]);
+            }
+        }
     }
 }
