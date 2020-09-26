@@ -80,5 +80,21 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
             }
         }
         
+        
+        ArrayList<Integer[]> splitter = new ArrayList<>();
+        for (int i = 0; i < prim.size(); i++) {
+            int primes = prim.get(i);
+            for (int j = 0; j < prim.size(); j++) {
+                int primSecond = prim.get(j);
+                for (Integer integer : even) {
+                    if ((primes + primSecond) == integer) {
+                       
+                        splitter.add(new Integer[]{integer, primes, primSecond});
+                    }
+                }
+            }
+        }
+
+        
     }
 }
